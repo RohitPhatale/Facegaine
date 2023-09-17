@@ -24,15 +24,17 @@ public class TestBaseClass {
 		driver.manage().window().maximize();
 		log.info("window maximise");
 		driver.get("https://facegenie-ams-school.web.app/");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		log.info("applied wait");
 		
 	}
 	
 	
 	@AfterMethod
-	public void endPage() {
-	//	driver.close();
+	public void endPage() throws InterruptedException {
+		
+		Thread.sleep(1000);
+		driver.close();
 		
 	}
 

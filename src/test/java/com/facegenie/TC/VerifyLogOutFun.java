@@ -5,21 +5,8 @@ import org.testng.annotations.Test;
 import com.facegenie.POM.HomePage;
 import com.facegenie.POM.LoginPage;
 
-public class VerifyLoginFun extends TestBaseClass {
-	@Test 
-	public void loginFun() {
-		LoginPage  l= new LoginPage(driver);
-		l.interEmailID();
-		log.info("inter email id");
-		l.interPassword();
-		log.info("inter password");
-		l.loginButton();
-		log.info("clicked on login button");
-		
-	}
-	
-	@Test(priority=1)
-	
+public class VerifyLogOutFun extends TestBaseClass{
+	@Test
 	public void logoutFun() throws InterruptedException {
 		LoginPage aa= new LoginPage(driver);
 		aa.interEmailID();
